@@ -1,0 +1,42 @@
+{% extends base_template %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .required:after {
+            content: " *";
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>{{ 'form.title'|trans }}</h2>
+        <p>{{ 'confirmation_text'|trans }}</p>
+        
+        {% if contactRequest is not null %}
+            <p>&nbsp;</p>
+            <h4>{{ 'copy_message'|trans }}:</h4>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>{{ 'form.name'|trans }}:</th>
+                        <td>{{ contactRequest.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'form.telephone'|trans }}:</th>
+                        <td>{{ contactRequest.telephone }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'form.email'|trans }}:</th>
+                        <td>{{ contactRequest.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'form.message'|trans }}:</th>
+                        <td>{{ contactRequest.message|nl2br }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}

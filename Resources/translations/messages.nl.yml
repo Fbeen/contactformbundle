@@ -1,0 +1,22 @@
+form:
+    title: Contact
+    name: Naam
+    telephone: Telefoon
+    email: E-mail
+    message: Uw bericht
+    created: Binnengekomen
+    submit: Verzenden
+    answered: Beantwoord
+    answered_at: Beantwoord op
+
+ContactRequest: Contactverzoeken
+confirmation_text: "Hartelijk dank. Uw bericht is verzonden."
+copy_message: "Hieronder ziet u een kopie van uw bericht"
+
+email_admins:
+    subject: Nieuw contactverzoek
+    body: Er is een nieuw contactverzoek
+    
+email_user:
+    subject: U heeft een contactverzoek ingediend.
+    body: "Hieronder ziet u een kopie van uw bericht:"

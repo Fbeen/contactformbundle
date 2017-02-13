@@ -1,0 +1,36 @@
+{% extends 'FbeenContactformBundle:Email:layout.html.twig' %}
+
+{% block body %}
+    <table>
+        <tr>
+            <td><h1>{{ 'email_user.subject'|trans }}</h1></td>
+        </tr>
+        <tr>
+            <td>{{ 'email_user.body'|trans }}</td>
+        </tr>
+        <tr>
+            <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>{{ 'form.name'|trans }}:</th>
+                        <td>{{ contactRequest.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'form.telephone'|trans }}:</th>
+                        <td>{{ contactRequest.telephone }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'form.email'|trans }}:</th>
+                        <td>{{ contactRequest.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'form.message'|trans }}:</th>
+                        <td>{{ contactRequest.message|nl2br }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

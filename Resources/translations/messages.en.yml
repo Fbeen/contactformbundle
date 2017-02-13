@@ -1,0 +1,21 @@
+form:
+    title: Contact
+    name: Name
+    telephone: Telephone
+    email: Email
+    message: Message
+    created: Requested
+    submit: Send
+    answered: Answered
+
+ContactRequest: Contact inquiries
+confirmation_text: "Thank you very much. Your message has been sended."
+copy_message: "Here is a copy of your message"
+
+email_admins:
+    subject: New contact inquiry
+    body: New contact inquiry
+    
+email_user:
+    subject: You requested a contact inquiry
+    body: "Here is a copy of your message:"

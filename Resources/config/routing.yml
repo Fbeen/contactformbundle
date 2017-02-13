@@ -1,0 +1,12 @@
+fbeen_contactform_form:
+    path:     /
+    defaults: { _controller: FbeenContactformBundle:Contact:form }
+    
+fbeen_contactform_update:
+    path:     /update
+    defaults: { _controller: FbeenContactformBundle:Contact:update }
+    methods:  [POST]
+    
+fbeen_contactform_confirmation:
+    path:     /confirmation
+    defaults: { _controller: FbeenContactformBundle:Contact:confirmation }

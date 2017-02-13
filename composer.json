@@ -1,0 +1,27 @@
+{
+    "name" : "fbeen/contactformbundle",
+    "description" : "This Bundle adds contactform integration in your Symfony project. It lets you render and process contactforms and add them to the database. Includes a Sonata admin class to view the contact requests in the admin panel.",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Frank Beentjes",
+        "email" : "frankbeen@gmail.com"
+    }],
+    "keywords" : [
+        "Contactform Bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": "^5.5.9|^7.0",
+        "symfony/framework-bundle": "^2.7|^3.0",
+        "fbeen/mailerbundle": "^1.0",
+        "hybridauth/hybridauth": "^2.7"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Fbeen\\ContactformBundle" : ""
+        }
+    },
+    "target-dir" : "Fbeen/ContactformBundle"
+}

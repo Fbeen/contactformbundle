@@ -1,0 +1,9 @@
+services:
+#    fbeen_contactform.example:
+#        class: Fbeen\ContactformBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    fbeen_contactform.admin.contact_request:
+        class: Fbeen\ContactformBundle\Admin\ContactRequestAdmin
+        arguments: [~, Fbeen\ContactformBundle\Entity\ContactRequest, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: ContactRequest }
