@@ -1,0 +1,17 @@
+{% extends base_template %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .required:after {
+            content: " *";
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2>{{ 'form.title'|trans }}</h2>
+        {% include 'FbeenContactformBundle:Contact:form.html.twig' %}
+    </div>
+{% endblock %}

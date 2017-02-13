@@ -53,7 +53,7 @@ class ContactController extends Controller
             return $this->redirectToRoute($this->getParameter('fbeen_contactform.redirect_after_submit'));
         }
 
-        return $this->render('FbeenContactformBundle:Contact:form.html.twig', array(
+        return $this->render('FbeenContactformBundle:Contact:update.html.twig', array(
             'base_template' => $this->getParameter('fbeen_contactform.base_template'),
             'form' => $form->createView(),
         ));
