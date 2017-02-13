@@ -3,6 +3,7 @@
 namespace Fbeen\ContactformBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * ContactRequest trait that you could include into your own ContactRequest class
@@ -26,6 +27,8 @@ trait ContactRequestTrait
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=64)
+     * 
+     * @Assert\Length(min=2, minMessage="Your name must have at least 2 characters.")
      */
     private $name;
 
@@ -40,6 +43,8 @@ trait ContactRequestTrait
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, nullable=true)
+     * 
+     * @Assert\Email(message = "The email is not a valid email.")
      */
     private $email;
 
@@ -47,6 +52,8 @@ trait ContactRequestTrait
      * @var string
      *
      * @ORM\Column(name="message", type="text")
+     * 
+     * @Assert\Length(min=10, minMessage="Your message must have at least 10 characters.")
      */
     private $message;
 
