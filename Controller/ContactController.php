@@ -104,14 +104,21 @@ class ContactController extends Controller
 
     private function emailAdmins(ContactRequestInterface $contactRequest)
     {
-        $this->get('fbeen_mailer')
+        $mailer = $this->get('fbeen_mailer');
+        
+        $mailer
            ->setSubject($this->get('translator')->trans('email_admins.subject'))
            ->setTemplate('FbeenContactformBundle:Email:confirm_admins.html.twig')
            ->setData(array(
                'contactRequest' => $contactRequest
             ))
-           ->sendMail()
         ;
+        
+        if(null !== $this->getParameter('fbeen_contactform.admins_mailaddress')) {
+            $mailer->setTo($this->getParameter('fbeen_contactform.admins_mailaddress'));
+        }
+        
+        $mailer->sendMail();
     }
     
     private function emailUser(ContactRequestInterface $contactRequest)
